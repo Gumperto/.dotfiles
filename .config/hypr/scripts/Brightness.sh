@@ -1,8 +1,5 @@
 #!/bin/bash
 
-iDIR="home/gumperto/.config/swaync/icons"
-notification_timeout=1000
-
 iDIR="$HOME/.config/swaync/icons"
 notification_timeout=1000
 

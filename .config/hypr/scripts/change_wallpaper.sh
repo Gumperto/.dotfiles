@@ -13,8 +13,8 @@ wal -i $current_wallpaper
 # killall -SIGUSR2 waybar
 # No longer necessary as reload_style_on_change is now true
 
-# For Konsole
-# cat ~/.local/share/konsole/colors-konsole.colorscheme > ~/.local/share/konsole/colors-konsole-copy.colorscheme
+# For Konsole (no longer exits)
+# cat $HOME/.local/share/konsole/colors-konsole.colorscheme > $HOME/.local/share/konsole/colors-konsole-copy.colorscheme
 
 # for instance in $(qdbus | grep 'org.kde.konsole'); do
 #     for session in $(qdbus $instance | grep -E 'Sessions/[0-9]+'); do

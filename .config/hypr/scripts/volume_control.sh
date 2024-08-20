@@ -1,7 +1,7 @@
 #!/bin/bash
 
-iDIR="/home/gumperto/.config/swaync/icons"
-sDIR="/home/gumperto/.config/hypr/scripts"
+iDIR="$HOME/.config/swaync/icons"
+sDIR="$HOME/.config/hypr/scripts"
 
 # Get Volume
 get_volume() {
