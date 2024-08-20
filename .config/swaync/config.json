@@ -48,7 +48,6 @@
   "widgets": [
     "label",
     "buttons-grid",
-    "volume",
     "mpris",
     "title",
     "dnd",
@@ -71,11 +70,7 @@
       "image-size": 96,
       "image-radius": 12
     },
-    "volume": {
-      "label": "󰕾",
-        "show-per-app": true
-    },
-    "buttons-grid": {
+   "buttons-grid": {
       "actions": [
         {
           "label": " ",
