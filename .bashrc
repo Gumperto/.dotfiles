@@ -7,7 +7,7 @@
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-alias fastfetch='fastfetch --load-config ~/.config/fastfetch/main.jsonc'
+alias fastfetch='fastfetch --load-config $HOME/.config/fastfetch/main.jsonc'
 alias bashrc='nvim $HOME/.bashrc'
 
 # PS1='[\u@\h \W]\$ '
