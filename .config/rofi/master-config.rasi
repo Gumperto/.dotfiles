@@ -1,0 +1,241 @@
+/* Master Config */
+
+/* ---- Configuration ---- */
+
+configuration {
+	modi:                       "drun,filebrowser,run,window";
+    show-icons:                 true;
+    display-drun:               "Apps";
+    display-run:                "Run";
+    display-filebrowser:        "Files";
+    display-window:             "Windows";
+	drun-display-format:        "{name}";
+	hover-select:               true;
+	me-select-entry:            "MouseSecondary";
+    me-accept-entry:            "MousePrimary";
+	window-format:              "{w} · {c} · {t}";
+}
+
+/* ---- Load pywal colors ---- */
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+
+/* ---- Global Properties ---- */
+* {
+
+    background-alt:              @active-background; // Buttons background
+    selected:                    @selected-normal-background; // Button selected
+    active:                      @selected-active-background; // Window activated
+    urgent:                      @selected-normal-background; // When hovering the activated window (maybe more?)
+
+    text-selected:               @foreground;
+    text:                        @active-background;
+
+    shade-bg:                    white / 12%;
+
+    border-color:                @foreground;
+}
+
+/* ---- Window ---- */
+window {
+    // Default
+    enabled:                    true;
+    fullscreen:                 false;
+    transparency:               "real";
+    cursor:                     "default";
+    spacing:                    0px;
+    border:                     0px;
+    border-radius:              14px;
+    location:                   center;
+    anchor:                     center;
+
+    // Style Values
+    width:                      61%;
+    background-color:           black / 85%;
+}
+
+/* ----- Main Box ----- */
+mainbox {
+    padding:                     10px;
+    enabled:                     true;
+    border-radius:               14px;
+    orientation:                 vertical;
+    children:                    [ "inputbar", "listbox" ];
+    background-color:            transparent;
+}
+
+
+    /* ---- Inputbar ---- */
+    inputbar {
+        enabled:                     true;
+        padding:                     0px 0px 0px 0px;
+        margin:                      0px 0px 10px 10px;
+        background-color:            transparent;
+        border-radius:               25px;
+        orientation:                 horizontal;
+        children:                    ["entry", "dummy", "mode-switcher"];
+
+    }
+
+                /* ---- Entry input ---- */
+                entry {
+                    font: "JetBrainsMono Nerd Font Bold 10";
+                    enabled:                     true;
+                    expand:                      false;
+                    width:                       20%;
+                    padding:                     9px 0px 0px 0px; //Change first value to align with mode switcher buttons
+                    border-radius:               100px;
+                    background-color:            transparent;
+                    text-color:                  @foreground;
+                    cursor:                      text;
+                    placeholder:                 " Search "; // << Search symbol
+                    placeholder-color:           inherit;
+                }
+
+                /* ---- Dummy ---- */
+                dummy {
+                    expand:                      true;
+                    background-color:            transparent;
+                }
+
+                /* ---- Mode Switcher ---- */
+                mode-switcher{
+                    enabled:                     true;
+                    spacing:                     10px;
+                    background-color:            transparent;
+                }
+                button {
+                    width:                       8%;
+                    padding:                     10px;
+                    spacing:                     0px 0px 0px 0px;
+                    border-radius:               15px;
+                    background-color:            @selected;
+                    text-color:                  @foreground;
+                    cursor:                      pointer;
+                }
+                button selected {
+                    background-color:            @active;
+                    text-color:                  @background;
+                }
+
+    /* ---- Listbox ---- */
+    listbox {
+        spacing:                     10px;
+        padding:                     0px;
+        background-color:            transparent;
+        orientation:                 horizontal;
+        children:                    [ "message", "listview" ];
+    }
+
+                /* ---- Message ---- */
+                message {
+                    background-color:            transparent;
+                    border:                      0px;
+                }
+                textbox {
+                    padding:                     12px;
+                    border-radius:               10px;
+                    background-color:            @background-alt;
+                    text-color:                  @background;
+                    vertical-align:              0.5;
+                    horizontal-align:            0.0;
+                }
+                error-message {
+                    padding:                     12px;
+                    border-radius:               20px;
+                    background-color:            @background-alt;
+                    text-color:                  @background;
+                }
+
+
+                /* ---- Listview---- */
+                listview {
+                    enabled:                     true;
+                    columns:                     2;
+                    lines:                       6;
+                    cycle:                       true;
+                    dynamic:                     true;
+                    scrollbar:                   true;
+                    layout:                      vertical;
+                    reverse:                     false;
+                    fixed-height:                false;
+                    fixed-columns:               true;
+                    spacing:                     8px;
+                    background-color:            transparent;
+                    text-color:                  @text;
+
+                //  Adapt rofi theme
+                    border:                      0px;
+                }
+
+                                /* ---- Scrollbar ---- */
+                                scrollbar {
+                                    width:        4px;
+                                    border:       0;
+                                    handle-color: @border-color;
+                                    handle-width: 8px;
+                                    padding:      0;
+                                    border-radius:      12px;
+                                }
+
+                                /* ---- Elements ---- */
+                                element {
+                                    enabled:                     true;
+                                    spacing:                     10px;
+                                    padding:                     12px 10px;
+                                    border-radius:               10px;
+                                    background-color:            transparent;
+                                    cursor:                      pointer;
+                                }
+
+                                element normal.normal {
+                                    background-color:            inherit;
+                                    text-color:                  inherit;
+                                }
+                                element normal.urgent {
+                                    background-color:            @urgent;
+                                    text-color:                  inherit;
+                                }
+                                element normal.active {
+                                    background-color:            @active;
+                                    text-color:                  inherit;
+                                }
+
+                                element selected.normal {
+                                    background-color:            @selected;
+                                    text-color:                  @text-selected;
+                                }
+                                element selected.urgent {
+                                    background-color:            @urgent;
+                                    text-color:                  @text-selected;
+                                }
+                                element selected.active {
+                                    background-color:            @urgent;
+                                    text-color:                  @text-selected;
+                                }
+                                // Adapt rofi theme
+                                element alternate.normal {
+                                    background-color:            transparent;
+                                    text-color:                  inherit;
+                                }
+                                element alternate.urgent {
+                                    background-color:            transparent;
+                                    text-color:                  inherit;
+                                }
+                                element alternate.active {
+                                    background-color:            transparent;
+                                    text-color:                  inherit;
+                                }
+                                element-icon {
+                                    background-color:            transparent;
+                                    text-color:                  inherit;
+                                    size:                        20px;
+                                    cursor:                      inherit;
+                                }
+                                element-text {
+                                    background-color:            transparent;
+                                    text-color:                  inherit;
+                                    cursor:                      inherit;
+                                    vertical-align:              0.5;
+                                    horizontal-align:            0.0;
+
+                                }

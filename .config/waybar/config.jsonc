@@ -1,0 +1,47 @@
+// -*- mode: jsonc -*-
+
+{
+    "include": "~/.config/waybar/modules",
+    "layer": "top",
+    //"mode": "dock",
+    "exclusive": true,
+    "passthrough": false,
+    "position": "top",
+    "spacing": 0,
+    "fixed-center": true,
+    "ipc": true,
+    "margin-top": 3,
+    "margin-left": 8,
+    "margin-right": 8,
+    "reload_style_on_change": true,
+
+    "modules-left": [
+        "custom/arch",
+        "hyprland/workspaces#4",
+        "custom/separator#dot-line",
+        "group/motherboard",
+        "custom/separator#separator#blank_3"
+    ],
+    "modules-center": [
+        "custom/filemanager",
+        "custom/separator#dot-line",
+        "clock",
+        "custom/separator#dot-line",
+        "custom/terminal"
+    ],
+    "modules-right": [
+        "network#speed",
+        "custom/separator#dot-line",
+        "custom/swaync",
+        "tray",
+        "mpris",
+        "custom/separator#dot-line",
+        "pulseaudio",
+        "custom/separator#dot-line",
+        "pulseaudio#microphone",
+        "custom/separator#dot-line",
+        "backlight",
+        "custom/separator#dot-line",
+        "battery"
+    ],
+}
