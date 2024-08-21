@@ -16,7 +16,10 @@ lualine.setup({
         component_separators = { left = '', right = '' },
         section_separators = { left = '', right = '' },
         disabled_filetypes = {
-          'dashboard',
+          'alpha',
+          'NvimTree',
+          'undotree',
+          'diff',
           -- 'NeogitStatus',
           -- 'NeogitCommitView',
           -- 'NeogitPopup',

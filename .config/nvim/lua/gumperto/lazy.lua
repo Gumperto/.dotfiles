@@ -22,7 +22,7 @@ vim.g.maplocalleader = "\\"
 
 -- Setup lazy.nvim
 require("lazy").setup({
-	
+
 	-- Telescope & dependencies(?)
 	{
 	'nvim-telescope/telescope.nvim', tag = '0.1.8',
@@ -33,7 +33,7 @@ require("lazy").setup({
 	{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 
 	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
-	
+
 	-- Harpoon
 	{
     	"ThePrimeagen/harpoon",
@@ -43,7 +43,7 @@ require("lazy").setup({
 		 "nvim-telescope/telescope.nvim",
 		},
 	},
-	
+
 	-- Undotree (version control)
 	{ "mbbill/undotree" },
 
@@ -97,7 +97,7 @@ require("lazy").setup({
     -- statusline
     {
     "nvim-lualine/lualine.nvim",
-        dependencies = { 'nvim-tree/nvim-web-devicons' },
+        dependencies = { "nvim-tree/nvim-web-devicons" },
     },
 
     -- Dashboard
@@ -114,6 +114,6 @@ require("lazy").setup({
     {
     "akinsho/bufferline.nvim",
     version = "*",
-    dependencies = "nvim-tree/nvim-web-devicons",
-    }
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    },
 })

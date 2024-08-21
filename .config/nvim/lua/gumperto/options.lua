@@ -36,14 +36,16 @@ local options = {
 	--colorcolumn = "80",
 	updatetime = 20,
 	scrolloff = 15,
-	mouse = "",
+	mouse = "a",
 	--guicursor = "a:block",
 
 	title = true,
 	-- titlestring = "%t - Wvim",
 	titlestring = "Neovim - %t",
 	guifont = "MesloLGS NF:h18",
-	-- clipboard = "unnamedplus",
+    clipboard = "unnamedplus",
+    
+    mousemoveevent = true,
 }
 
 -- vim.opt.nrformats:append("alpha") -- increment letters

@@ -6,4 +6,3 @@ vim.g.loaded_netrwPlugin = 1
 require("gumperto")
 
 vim.cmd("colorscheme neopywal")
--- print("hello")
