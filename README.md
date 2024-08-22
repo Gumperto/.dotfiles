@@ -9,7 +9,7 @@ Collection of config files for my Arch Linux (btw) environment. They're mostly h
 
 
 ## Cursor
-Somewhere in these config files you'll find a custom Kirisame Marisa cursor I use, which could be found [here](https://store.kde.org/p/2165948).
+Somewhere in these config files you'll find a custom Kirisame Marisa cursor that I use, which could be found [here](https://store.kde.org/p/2165948).
 
 ## SDDM
 The SDDM dots are shamelessly ripped and modified from [JaKooLit's](https://github.com/JaKooLit) fork of the [sddm-astronaut theme](https://github.com/Keyitdev/sddm-astronaut-theme), called [simple-sddm-2](https://github.com/JaKooLit/simple-sddm-2). I simply tweaked the QML script slightly so I can put a .gif in the background.
