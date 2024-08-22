@@ -10,7 +10,7 @@
     "custom/filemanager" : {
         "format" : "  ",
         "tooltip": false,
-        "on-click": "dolphin"
+        "on-click": "thunar"
     },
 
     "custom/terminal" : {
