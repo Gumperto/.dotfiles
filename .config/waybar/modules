@@ -213,7 +213,7 @@
             "critical": 15
         },
         "format": "{icon} {capacity}%",
-        "format-charging": "{capacity}%",
+        "format-charging": " {capacity}%",
         "format-plugged": "󱘖 {capacity}%",
         "format-alt-click": "click",
         "format-full": "{icon} Full",
@@ -237,7 +237,7 @@
     },
 
     "clock": {
-        "interval": 1,
+        "interval": 60,
         //"format": " {:%I:%M %p}", // AM PM format
         "format": " {:%d/%m/%Y %H:%M}",
         "format-alt": " {:%H:%M   %Y, %d %B, %A}",
@@ -254,14 +254,14 @@
                 "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
                 "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
             }
-        }
-    },
-    "actions":  {
-        "on-click-right": "mode",
-        "on-click-forward": "tz_up",
-        "on-click-backward": "tz_down",
-        "on-scroll-up": "shift_up",
-        "on-scroll-down": "shift_down"
+        },
+        "actions":  {
+            "on-click-right": "mode",
+            "on-click-forward": "tz_up",
+            "on-click-backward": "tz_down",
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
+        },
     },
 
     "cpu": {

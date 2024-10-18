@@ -241,3 +241,35 @@ progressbar {
     font-weight: 500;
     font-size: 0.8rem;
 }
+
+
+.widget-volume {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 2px;
+    margin: 10px 10px 5px 10px;
+    border-radius: 10px;
+    font-size: x-large;
+    color: @text;
+}
+
+.widget-volume>box>button {
+    background: @color12;
+    border: none
+}
+
+.per-app-volume {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 4px 8px 8px;
+    margin: 0 8px 8px;
+    border-radius: 10px;
+	color: @text
+}
+
+.widget-backlight {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 5px;
+    margin: 10px 10px 5px 10px;
+    border-radius: 10px;
+    font-size: x-large;
+    color: @text
+}
