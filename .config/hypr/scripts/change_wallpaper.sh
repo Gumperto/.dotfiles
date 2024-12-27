@@ -1,13 +1,10 @@
 #!/bin/bash
 
-current_wallpaper="$HOME/current-wallpaper/current-wallpaper"
-monitor=`hyprctl monitors | grep Monitor | awk '{print $2}'`
+choice=$1
 
-hyprctl hyprpaper unload all
-hyprctl hyprpaper preload $current_wallpaper
-hyprctl hyprpaper wallpaper "$monitor, $current_wallpaper"
+swww img $choice --transition-type wipe --transition-angle 45 --transition-duration 0.33 --transition-step 250 --transition-fps 60
 
-wal -i $current_wallpaper
+wal -i $choice
 
 # For Waybar
 # killall -SIGUSR2 waybar

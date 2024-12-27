@@ -4,5 +4,9 @@ directory=$HOME/wallpaper
 
 if [ -d "$directory" ]; then
     random_background=$(ls $directory/* | shuf -n 1)
-    cp "$random_background" $HOME/current-wallpaper/current-wallpaper
+    swww img $random_background --transition-type wipe --transition-angle 45 --transition-duration 0.33 --transition-step 250 --transition-fps 60
+
+    wal -i $random_background
+    swaync-client -rs
+    pywalfox update
 fi

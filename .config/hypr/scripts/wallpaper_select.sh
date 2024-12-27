@@ -42,8 +42,7 @@ main() {
 
   # Random choice case
   if [ "$choice" = "$RANDOM_PIC_NAME" ]; then
-    $HOME/.config/hypr/scripts/random_wallpaper.sh
-    $HOME/.config/hypr/scripts/change_wallpaper.sh
+    $SCRIPTSDIR/random_wallpaper.sh
     exit 0
   fi
 
@@ -58,8 +57,7 @@ main() {
   done
 
   if [[ $pic_index -ne -1 ]]; then
-    cp "$HOME/wallpaper/$choice" $HOME/current-wallpaper/current-wallpaper
-    $HOME/.config/hypr/scripts/change_wallpaper.sh
+    $SCRIPTSDIR/change_wallpaper.sh "${PICS[$i]}"
   else
     echo "Image not found."
     exit 0
