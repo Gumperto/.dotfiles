@@ -237,6 +237,7 @@
     },
 
     "clock": {
+        "timezone": "Asia/Tokyo",
         "interval": 60,
         //"format": " {:%I:%M %p}", // AM PM format
         "format": " {:%d/%m/%Y %H:%M}",
@@ -338,7 +339,7 @@
         "format-alt-click": "click",
         "tooltip": true,
         "tooltip-format": "{used:0.1f}GB/{total:0.1f}G",
-        "on-click-right": "kitty --title htop sh -c 'htop'"
+        "on-click-right": "kitty --class htop sh -c 'htop'"
     },
 
     "mpris": {
@@ -446,7 +447,7 @@
         "format-critical": "{temperatureC}°C {icon}",
         "format": "{temperatureC}°C {icon}",
         "format-icons": ["󰈸"],
-        "on-click-right": "kitty --title htop sh -c 'htop'"
+        "on-click-right": "kitty --class htop sh -c 'htop'"
     },
 
     "tray": {
@@ -640,7 +641,7 @@
     "cpu#vertical": {
         "format": "󰍛\n{usage}%",
         "interval": 1,
-        "on-click": "kitty --title htop sh -c 'htop'",
+        "on-click": "kitty --class htop sh -c 'htop'",
     },
 
     "memory#vertical": {
@@ -650,7 +651,7 @@
         "format-alt-click": "click",
         "tooltip": true,
         "tooltip-format": "{used:0.1f}GB/{total:0.1f}G",
-        "on-click": "kitty --title htop sh -c 'htop'",
+        "on-click": "kitty --class htop sh -c 'htop'",
     },
 
     "pulseaudio#vertical": {
@@ -699,7 +700,7 @@
         "format-critical": "{icon}\n{temperatureC}°C",
         "format": " {icon}",
         "format-icons": ["󰈸"],
-        "on-click": "kitty --title htop sh -c 'htop'"
+        "on-click": "kitty --class htop sh -c 'htop'"
     },
 
     "custom/power_vertical": {
