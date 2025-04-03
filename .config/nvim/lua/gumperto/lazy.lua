@@ -85,6 +85,11 @@ require("lazy").setup({
 		},
 	},
 
+    -- DAP
+    {
+    "mfussenegger/nvim-dap",
+    },
+
 	-- pywal integration
 	{
 	"RedsXDD/neopywal.nvim",
