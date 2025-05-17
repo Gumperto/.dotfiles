@@ -19,6 +19,22 @@
         "on-click": "kitty"
     },
 
+    "custom/audio-toggle": {
+        "exec": "~/.config/hypr/scripts/toggle_audio_mode.sh",
+        "return-type": "json",
+        "interval": "once",
+        "signal": 10,
+        "format-icons": {
+            "listening": "🎧",
+            "meeting": "🎤",
+            "unknown": "❓"
+        },
+        "format": "{icon}",
+        "tooltip-format": "Audio Mode: {text}",
+        "on-click": "~/.config/hypr/scripts/toggle_audio_mode.sh --toggle; pkill -RTMIN+10 waybar",
+        "icon-size": 10
+    },
+
     // HYPRLAND WORKSPACES. CHOOSE as desired and place on waybar configs
     // CIRCLES Style
     "hyprland/workspaces": {

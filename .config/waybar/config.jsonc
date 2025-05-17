@@ -36,6 +36,8 @@
         "tray",
         "mpris",
         "custom/separator#dot-line",
+        "custom/audio-toggle",
+        "custom/separator#dot-line",
         "idle_inhibitor",
         "custom/separator#dot-line",
         "pulseaudio",
