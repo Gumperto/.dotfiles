@@ -19,8 +19,12 @@
         "custom/arch",
         "hyprland/workspaces#4",
         "custom/separator#dot-line",
+        "custom/audio-toggle",
+        "custom/separator#dot-line",
+        "custom/manga_ocr_toggle",
+        "custom/separator#dot-line",
         "group/motherboard",
-        "custom/separator#separator#blank_3"
+        "custom/separator#separator#blank_3",
     ],
     "modules-center": [
         "custom/filemanager",
@@ -35,8 +39,6 @@
         "custom/swaync",
         "tray",
         "mpris",
-        "custom/separator#dot-line",
-        "custom/audio-toggle",
         "custom/separator#dot-line",
         "idle_inhibitor",
         "custom/separator#dot-line",

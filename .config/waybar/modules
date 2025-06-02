@@ -35,6 +35,21 @@
         "icon-size": 10
     },
 
+    "custom/manga_ocr_toggle": {
+        "exec": "~/.config/hypr/scripts/start_manga_ocr.sh",
+        "return-type": "json",
+        "interval": "once",
+        "signal": 10,
+        "format-icons": {
+            "on": "📖",
+            "off": "📕",
+        },
+        "format": "{icon}",
+        "tooltip-format": "Status: {text}",
+        "on-click": "~/.config/hypr/scripts/start_manga_ocr.sh --toggle; pkill -RTMIN+10 waybar",
+        "icon-size": 10,
+    },
+
     // HYPRLAND WORKSPACES. CHOOSE as desired and place on waybar configs
     // CIRCLES Style
     "hyprland/workspaces": {
