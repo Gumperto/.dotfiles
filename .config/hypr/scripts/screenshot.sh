@@ -6,7 +6,9 @@ notify_cmd_shot="notify-send -h string:x-canonical-private-synchronous:shot-noti
 
 time=$(date "+%d-%b_%H-%M-%S")
 dir="$(xdg-user-dir)/Pictures/Screenshots"
+dir_jpn="$(xdg-user-dir)/Pictures/JP-Trans"
 file="Screenshot_${time}_${RANDOM}.png"
+file_jpn="tmp.png"
 
 active_window_class=$(hyprctl -j activewindow | jq -r '(.class)')
 active_window_file="Screenshot_${time}_${active_window_class}.png"
@@ -30,6 +32,27 @@ notify_view() {
             "${sDIR}/Sounds.sh" --screenshot
         else
             ${notify_cmd_shot} "Screenshot NOT Saved."
+        fi
+    fi
+}
+
+notify_view_jpn() {
+    if [[ "$1" == "active" ]]; then
+        if [[ -e "${active_window_path}" ]]; then
+            ${notify_cmd_shot} "Translation of '${active_window_class}' Saved."
+            "${sDIR}/Sounds.sh" --screenshot
+        else
+            ${notify_cmd_shot} "Translation of '${active_window_class}' not Saved"
+        fi
+    elif [[ "$1" == "swappy" ]]; then
+		${notify_cmd_shot} "Translation Captured."
+    else
+        local check_file="$dir_jpn/$file_jpn"
+        if [[ -e "$check_file" ]]; then
+            ${notify_cmd_shot} "Translation Saved."
+            "${sDIR}/Sounds.sh" --screenshot
+        else
+            ${notify_cmd_shot} "Translation NOT Saved."
         fi
     fi
 }
@@ -83,6 +106,17 @@ shotarea() {
 	notify_view
 }
 
+shotarea_jpn() {
+	tmpfile=$(mktemp)
+	grim -g "$(slurp)" - >"$tmpfile"
+	if [[ -s "$tmpfile" ]]; then
+		wl-copy <"$tmpfile"
+		mv "$tmpfile" "$dir_jpn/$file_jpn"
+	fi
+	rm "$tmpfile"
+	notify_view_jpn
+}
+
 shotactive() {
     active_window_class=$(hyprctl -j activewindow | jq -r '(.class)')
     active_window_file="Screenshot_${time}_${active_window_class}.png"
@@ -119,6 +153,8 @@ elif [[ "$1" == "--active" ]]; then
 	shotactive
 elif [[ "$1" == "--swappy" ]]; then
 	shotswappy
+elif [[ "$1" == "--jpn" ]]; then
+    shotarea_jpn
 else
 	echo -e "Available Options : --now --in5 --in10 --win --area --active --swappy"
 fi
