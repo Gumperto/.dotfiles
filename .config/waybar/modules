@@ -39,15 +39,22 @@
         "exec": "~/.config/hypr/scripts/start_manga_ocr.sh",
         "return-type": "json",
         "interval": "once",
-        "signal": 10,
+        "signal": 11,
         "format-icons": {
             "on": "📖",
             "off": "📕",
         },
         "format": "{icon}",
         "tooltip-format": "Status: {text}",
-        "on-click": "~/.config/hypr/scripts/start_manga_ocr.sh --toggle; pkill -RTMIN+10 waybar",
+        "on-click": "~/.config/hypr/scripts/start_manga_ocr.sh --toggle; pkill -RTMIN+11 waybar",
         "icon-size": 10,
+    },
+
+    "custom/manga_ocr_toggle_test": {
+        "exec": "echo '{\"text\": \"TEST\", \"alt\": \"off\"}'",
+        "return-type": "json",
+        "interval": 5,
+        "format": "{text}"
     },
 
     // HYPRLAND WORKSPACES. CHOOSE as desired and place on waybar configs
@@ -268,7 +275,7 @@
     },
 
     "clock": {
-        "timezone": "Asia/Tokyo",
+        "timezone": "Asia/Bangkok",
         "interval": 60,
         //"format": " {:%I:%M %p}", // AM PM format
         "format": " {:%d/%m/%Y %H:%M}",
