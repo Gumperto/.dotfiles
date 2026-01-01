@@ -156,7 +156,7 @@ elif [[ "$1" == "--swappy" ]]; then
 elif [[ "$1" == "--jpn" ]]; then
     shotarea_jpn
 else
-	echo -e "Available Options : --now --in5 --in10 --win --area --active --swappy"
+	echo -e "Available Options : --now --in5 --in10 --win --area --active --swappy --jpn"
 fi
 
 exit 0
