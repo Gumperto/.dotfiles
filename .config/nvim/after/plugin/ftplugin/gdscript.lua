@@ -10,6 +10,6 @@ vim.lsp.start({
     vim.api.nvim_command('echo serverstart("' .. pipe .. '")')
   end
 })
-
-local lspconfig = require("lspconfig")
-lspconfig.gdscript.setup {}
+--
+-- local lspconfig = require("lspconfig")
+-- lspconfig.gdscript.setup {}
