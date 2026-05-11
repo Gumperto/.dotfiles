@@ -9,7 +9,7 @@ if [[ "$1" == "--toggle" ]]; then
         echo '{"text": "Manga_OCR off", "alt": "off"}' | jq --unbuffered --compact-output
     else
         systemctl --user start "$SERVICE"
-        notify-send "📖 Started Manga OCR" "ちょっと待ってください"
+        notify-send "📖 Started Manga OCR" "少々お待ちください"
         echo '{"text": "Manga_OCR on", "alt": "on"}' | jq --unbuffered --compact-output
     fi
 

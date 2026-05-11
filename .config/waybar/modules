@@ -42,12 +42,12 @@
         "signal": 11,
         "format-icons": {
             "on": "📖",
-            "off": "📕",
+            "off": "📕"
         },
         "format": "{icon}",
         "tooltip-format": "Status: {text}",
         "on-click": "~/.config/hypr/scripts/start_manga_ocr.sh --toggle; pkill -RTMIN+11 waybar",
-        "icon-size": 10,
+        "icon-size": 10
     },
 
     "custom/manga_ocr_toggle_test": {
@@ -65,8 +65,8 @@
         "format": "{icon}",
         "show-special": false,
         "on-click": "activate",
-        "on-scroll-up": "hyprctl dispatch workspace e+1",
-        "on-scroll-down": "hyprctl dispatch workspace e-1",
+        "on-scroll-up": " hyprctl dispatch 'hl.dsp.focus({ workspace = \"e+1\" })' ",
+        "on-scroll-down": " hyprctl dispatch 'hl.dsp.focus({ workspace = \"e-1\" })' ",
         "persistent-workspaces": {
             "1": [],
             "2": [],
@@ -87,8 +87,8 @@
         "format": "{icon}",
         "show-special": false,
         "on-click": "activate",
-        "on-scroll-up": "hyprctl dispatch workspace e+1",
-        "on-scroll-down": "hyprctl dispatch workspace e-1",
+        "on-scroll-up": "hyprctl dispatch 'hl.dsp.focus({ workspace = \"e+1\" })'",
+        "on-scroll-down": "hyprctl dispatch 'hl.dsp.focus({ workspace = \"e-1\" })'",
         "persistent-workspaces":{
             "1": [],
             "2": [],
@@ -117,8 +117,8 @@
         "all-outputs": true,
         "format": "{icon}",
         "on-click": "activate",
-        "on-scroll-up": "hyprctl dispatch workspace e+1",
-        "on-scroll-down": "hyprctl dispatch workspace e-1",
+        "on-scroll-up": "hyprctl dispatch 'hl.dsp.focus({ workspace = \"e+1\" })'",
+        "on-scroll-down": "hyprctl dispatch 'hl.dsp.focus({ workspace = \"e-1\" })'",
         "show-special": false,
         "persistent-workspaces":{
             "1": [],
@@ -167,8 +167,8 @@
         //"format": " {icon} ",
         "show-special": false,
         "on-click": "activate",
-        "on-scroll-up": "hyprctl dispatch workspace e+1",
-        "on-scroll-down": "hyprctl dispatch workspace e-1",
+        "on-scroll-up": "hyprctl dispatch 'hl.dsp.focus({ workspace = \"e+1\" })'",
+        "on-scroll-down": "hyprctl dispatch 'hl.dsp.focus({ workspace = \"e-1\" })'",
         "all-outputs": true,
         "sort-by-number": true,
         "format-icons": {
@@ -193,11 +193,11 @@
         "orientation": "horizontal",
         "modules": [
             "cpu",
-            "custom/separator#dot-line",
+            "custom/separator-dot-line",
             "memory",
-            "custom/separator#dot-line",
+            "custom/separator-dot-line",
             "temperature",
-            "custom/separator#dot-line",
+            "custom/separator-dot-line",
             "disk",
         ]
     },
@@ -275,7 +275,7 @@
     },
 
     "clock": {
-        "timezone": "Asia/Bangkok",
+        "timezone": "Asia/Tokyo",
         "interval": 60,
         //"format": " {:%I:%M %p}", // AM PM format
         "format": " {:%d/%m/%Y %H:%M}",
@@ -564,7 +564,7 @@
 
     "custom/swaync": {
         "tooltip":true,
-        "format": "{icon} {}",
+        "format": "{icon} {text}",
         "format-icons": {
             "notification": "<span foreground='red'><sup></sup></span>",
             "none": "",
@@ -606,37 +606,37 @@
 
 
     // Separators
-    "custom/separator#dot": {
+    "custom/separator-dot": {
         "format": "",
         "interval": "once",
         "tooltip": false
     },
 
-    "custom/separator#dot-line": {
+    "custom/separator-dot-line": {
         "format": "",
         "interval": "once",
         "tooltip": false
     },
 
-    "custom/separator#line": {
+    "custom/separator-line": {
         "format": "|",
         "interval": "once",
         "tooltip": false
     },
 
-    "custom/separator#blank": {
+    "custom/separator-blank": {
         "format": "",
         "interval": "once",
         "tooltip": false
     },
 
-    "custom/separator#blank_2": {
+    "custom/separator-blank_2": {
         "format": "  ",
         "interval": "once",
         "tooltip": false
     },
 
-    "custom/separator#blank_3": {
+    "custom/separator-blank_3": {
         "format": "   ",
         "interval": "once",
         "tooltip": false
